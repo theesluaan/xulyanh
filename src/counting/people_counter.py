@@ -8,4 +8,6 @@ def count_people(objects, old_objects, line_y, counted_ids):
             if old_y < line_y <= cy and obj_id not in counted_ids:
                 count += 1
                 counted_ids.add(obj_id)
+
     return count
+
