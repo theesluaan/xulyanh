@@ -176,7 +176,7 @@ class PeopleCounterUI:
             
         # 2. Khởi tạo webcam (chỉ số 0) và thiết lập độ phân giải mặc định 640x480
         self.video_path = "Webcam Live"
-        self.cap = cv2.VideoCapture(0)
+        self.cap = cv2.VideoCapture(1)
         
         # Thiết lập độ phân giải để đồng bộ với logic xử lý (640x480)
         self.cap.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
@@ -261,7 +261,7 @@ class PeopleCounterUI:
             return
         
         frame = cv2.resize(frame, (640, 480))
-        LINE_Y = 240
+        LINE_Y = 320
         
         fg_mask = self.subtractor.apply(frame)
         th = apply_threshold(fg_mask)
