@@ -261,7 +261,7 @@ class PeopleCounterUI:
             return
         
         frame = cv2.resize(frame, (640, 480))
-        LINE_Y = 320
+        LINE_Y = 240
         
         fg_mask = self.subtractor.apply(frame)
         th = apply_threshold(fg_mask)
